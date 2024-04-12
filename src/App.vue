@@ -1,22 +1,25 @@
 <script>
+import AppHeader from './components/AppHeader.vue';
+import AppFooter from './components/AppFooter.vue';
+import AppContent from './components/AppContent.vue';
 
+  export default {
+    components: {
+      AppHeader,
+      AppFooter,
+      AppContent,
+
+    }
+  }
 </script>
 
 <template>
-  
+<AppHeader/>
+<AppContent/>
+<AppFooter/>
+
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+<style lang="scss">
+@use './style/general.scss'
 </style>
