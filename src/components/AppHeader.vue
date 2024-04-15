@@ -3,9 +3,7 @@
 			<nav class="container">
 				<div class="row">
 					<ul class="flex">
-						<li>Donna</li>
-						<li>Uomo</li>
-						<li>Bambini</li>
+						<li v-for="(link,i) in menu" :key="i">{{ link.text }}</li>
 					</ul>
 
 					<a class="logo" href="#">
@@ -15,7 +13,7 @@
 					<ul class="flex">
 						<li>&hearts;</li>
 						<li>&hearts;</li>
-						<li>&hearts;</li>
+						<li>{{ ciao }}</li>
 					</ul>
 				</div>
 			</nav>
@@ -25,6 +23,26 @@
 <script>
 
 export default{
+	data(){
+		return {
+			menu: [
+				{
+					text:'Donna',
+					href: '#',
+				},
+				{
+					text:'Uomo',
+					href: '#',
+				},
+				{
+					text:'Bambini',
+					href: '#',
+				},
+				
+			]
+		}
+	},
+	props: ['ciao'],
 
 }
 
@@ -53,5 +71,4 @@ export default{
 .page-header .row ul {
 	gap: 20px;
 }
-
 </style>
